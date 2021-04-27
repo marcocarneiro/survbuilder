@@ -18,9 +18,9 @@ class Dashboard extends BaseController
 		helper('funcoes');
 				
 		echo view('dashboard/_header');
-        echo view('dashboard/_sidebar', $data);
-        echo view('dashboard/_form_perguntas', $data);
-        echo view('dashboard/_footer', $data);
+        echo view('dashboard/_sidebar');
+        echo view('dashboard/_form_perguntas');
+        echo view('dashboard/_footer');
 	}
 
 	public function process_cadastro_pesquisa()
