@@ -16,9 +16,6 @@ class Dashboard extends BaseController
 		helper('form');
 		helper('date');
 		helper('funcoes');
-
-		$pesquisas = new Pesquisas();
-		$data['pesquisas'] = $pesquisas->getPesquisa();
 				
 		echo view('dashboard/_header');
         echo view('dashboard/_sidebar', $data);
