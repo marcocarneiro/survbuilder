@@ -51,6 +51,33 @@
       margin-bottom: 40px;
     }
 
+
+    .frm-lista-perguntas{
+        padding-left: 0;
+        list-style-position: inside;
+    }
+    .frm-lista-perguntas li{
+        padding: 20px 0;
+        border-top: 1px solid #ccc;
+    }
+    .frm-lista-perguntas li:last-child{
+        border-bottom: 1px solid #ccc;
+    }
+    .frm-lista-perguntas .arrastar{
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .frm-lista-perguntas .txt-pergunta{
+        display: inline-block;
+        width: 60%;
+    }
+    .frm-lista-perguntas .controles{
+        padding-left: 20px;
+        border-left: 1px solid #ccc;
+    }
+    .add-pergunta, .remover-pergunta{
+        cursor: pointer;
+    }
   </style>
 
 </head>

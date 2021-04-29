@@ -38,27 +38,38 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-          <div class="card">
-            <div class="card-body">
-              <h2>Cadastrar pergunta</h2>
-              <?php
-                $parametros = ['class' => 'clearfix', 'id' => 'form-cad-pergunta'];
-                echo form_open('Dashboard/process_cadastro_pesquisa', $parametros);
-              ?>
-                
-                <hr>
-                
-                
-
-                <hr>
-                
-                
-
-
-                <button class="btn btn-primary" type="submit">Enviar</button>
-              </form>
+            <div class="card">
+                <div class="card-body">
+                <h2>Cadastrar pesquisa</h2>
+                </div>
             </div>
-          </div>
+
+            <ol id="lista-perguntas" class="frm-lista-perguntas mt-3">
+                <li>
+                    <span class="arrastar" data-toggle="tooltip" data-placement="top" title="Arraste para mudar a ordem">
+                        <i class="fas fa-arrows-alt"></i>
+                    </span>
+                    <span contentEditable="true" class="txt-pergunta">
+                        Clique aqui para editar o texto da pergunta.
+                    </span>
+                    <span class="controles float-right mr-3">
+                        <select class="tipos-resposta" data-toggle="tooltip" data-placement="top" title="Selecione o tipo de resposta">
+                            <option value="tipo texto" selected>Tipo: Texto</option>
+                            <option value="tipo radio">Tipo: Radio</option>
+                            <option value="tipo checkbox">Tipo: Checkbox</option>
+                            <option value="tipo select">Tipo: Select</option>
+                            <option value="tipo textarea">Tipo: Textarea</option>
+                            <option value="tipo multi textos">Tipo: Multi Textos</option>
+                        </select>
+                        <span class="add-pergunta ml-4" data-toggle="tooltip" data-placement="top" title="Adicionar nova pergunta">
+                           <i class="fas fa-plus fa-1x"></i> 
+                        </span>
+                        <span class="remover-pergunta ml-4" data-toggle="tooltip" data-placement="top" title="Remover pergunta">
+                            <i class="fas fa-trash fa-1x"></i> 
+                        </span>                        
+                    </span>
+                </li>
+            </ol>
 
         </div>
         <!-- /.container-fluid -->

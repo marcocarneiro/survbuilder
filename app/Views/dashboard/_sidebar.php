@@ -4,7 +4,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
         <div class="sidebar-brand-icon">
-          <img src="<?=base_url('img/logo-cepedoc-horizontal.png')?>" width="100%">
+          Logotipo
         </div>
       </a>
 
