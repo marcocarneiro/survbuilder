@@ -32,12 +32,34 @@
   
   <script src="http://SortableJS.github.io/Sortable/Sortable.js"></script>
   <script>
-    // Simple list
-    Sortable.create(lista-perguntas, { /* options */ });
+    // Lista de perguntas
+    Sortable.create(lista_perguntas, { /* options */ });
+
     //ativando tool tips nas páginas
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     });
+
+    //Escolha do tipo de resposta
+    (function(){
+      $('.tipos-resposta').change(function(){
+        var tipo = $(this).val();
+        switch(tipo) {
+          case 'radio':
+            alert('insere opções de respostas');
+            break;
+          case 'checkbox':
+            alert('insere opções de respostas');
+            break;
+          case 'select':
+            alert('insere opções de respostas');
+            break;
+          case 'multi textos':
+            alert('insere opções de respostas');
+            break;
+        }
+      });
+    })();
   </script>
 </body>
 

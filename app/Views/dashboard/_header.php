@@ -75,6 +75,18 @@
         padding-left: 20px;
         border-left: 1px solid #ccc;
     }
+    .frm-lista-perguntas .tipos-resposta{
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #6e707e;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #d1d3e2;
+      border-radius: .35rem;
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
     .add-pergunta, .remover-pergunta{
         cursor: pointer;
     }
