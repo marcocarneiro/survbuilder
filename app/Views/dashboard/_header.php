@@ -72,6 +72,8 @@
         width: 60%;
     }
     .frm-lista-perguntas .controles{
+        /* display: inline-block;
+        width: 50%; */
         padding-left: 20px;
         border-left: 1px solid #ccc;
     }
@@ -89,6 +91,11 @@
     }
     .add-pergunta, .remover-pergunta{
         cursor: pointer;
+    }
+    .add-pergunta{
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
     }
   </style>
 

@@ -65,5 +65,10 @@
         </div>
         <!-- /.container-fluid -->
 
+        <!-- float button para adicionar perguntas -->
+        <span class="add-pergunta ml-4" data-toggle="tooltip" data-placement="top" title="Adicionar nova pergunta">
+          <i class="fas fa-plus-circle fa-3x text-success"></i> 
+        </span>
+
       </div>
       <!-- End of Main Content -->      
