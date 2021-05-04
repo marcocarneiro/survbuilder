@@ -36,25 +36,27 @@
     });
 
 
-    var templateOpcoes = '<ul class="lista-opcoes">'+
-      '<li>'+
+    var templateOpcoes = '<p class="tit-respostas pb-3 pt-4 pl-4 m-0">Opções de resposta (clique para adicionar novas opções) '+
+      '<span class="add-opcao-resposta"><i class="fas fa-plus-circle text-success"></i></span></p>'+
+      '<ul class="lista-opcoes">'+
+      '<li class="pb-4">'+
           '<span class="arrastar" data-toggle="tooltip" data-placement="top" title="Arraste para mudar a ordem">' +
               '<i class="fas fa-arrows-alt"></i></span>' +
           '<span contentEditable="true" class="txt-resposta">' +
               'Clique aqui para editar o texto da resposta.' +
           '</span>' +
-          '<span class="add-pergunta ml-4" data-toggle="tooltip" data-placement="top" title="Adicionar nova resposta">' +
-                '<i class="fas fa-plus fa-1x"></i></span>' +
-                '<span class="remover-resposta ml-4" data-toggle="tooltip" data-placement="top" title="Remover resposta">' +
-                  '<i class="fas fa-trash fa-1x"></i></span>' +
+          '<span class="remover-resposta ml-4" data-toggle="tooltip" data-placement="top" title="Remover resposta">' +
+            '<i class="fas fa-trash fa-1x"></i></span>' +
           '</span>' +
       '</li></ul>';
       
     //Escolha do tipo de resposta
     (function(){
-      $('.tipos-resposta').on('change', function(){
-        var el = $(this).parent().parent().parent();
+      $('body').on('change', '.tipos-resposta', function(){
+        var el = $(this).parent().parent();
+        
         var tipo = el.find('.controles .tipos-resposta').val();
+        el.find('.tit-respostas').remove();
         el.find('.lista-opcoes').remove();
         if(tipo == 'radio' || tipo == 'checkbox' || tipo == 'select' || tipo == 'multi textos')
         {
@@ -81,7 +83,6 @@
                           '<span class="remover-pergunta ml-4" data-toggle="tooltip" data-placement="top" title="Remover pergunta">' +
                               '<i class="fas fa-trash fa-1x"></i></span>' +
                       '</span></li>';
-        //templatePergunta.clone().appendTo('#lista_perguntas');
         $('#lista_perguntas').append(templatePergunta);
       });
     })();
@@ -89,7 +90,7 @@
     //remove perguntas
     (function(){
       $('body').on('click', '.remover-pergunta', function(){
-        if($('#lista_perguntas li').length > 1)
+        if($('#lista_perguntas li.pergunta-item').length > 1)
         {
           $(this).parent().parent().remove();
         }

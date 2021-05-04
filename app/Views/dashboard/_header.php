@@ -56,11 +56,11 @@
         padding-left: 0;
         list-style-position: inside;
     }
-    .frm-lista-perguntas li{
+    .frm-lista-perguntas li.pergunta-item{
         padding: 20px 0;
         border-top: 1px solid #ccc;
     }
-    .frm-lista-perguntas li:last-child{
+    .frm-lista-perguntas li.pergunta-item:last-child{
         border-bottom: 1px solid #ccc;
     }
     .frm-lista-perguntas .arrastar{
@@ -72,8 +72,6 @@
         width: 60%;
     }
     .frm-lista-perguntas .controles{
-        /* display: inline-block;
-        width: 50%; */
         padding-left: 20px;
         border-left: 1px solid #ccc;
     }
@@ -89,7 +87,8 @@
       border-radius: .35rem;
       transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     }
-    .add-pergunta, .remover-pergunta{
+    
+    .add-pergunta, .remover-pergunta, .add-opcao-resposta, .remover-resposta{
         cursor: pointer;
     }
     .add-pergunta{
