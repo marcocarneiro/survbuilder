@@ -28,14 +28,14 @@
   <script src="http://SortableJS.github.io/Sortable/Sortable.js"></script>
   <script>
     // Lista de perguntas
-      Sortable.create(lista_perguntas, { /* options */ });
+    Sortable.create(lista_perguntas, { /* options */ });
 
     //ativando tool tips nas páginas
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     });
 
-
+    
     var templateOpcoes = '<p class="tit-respostas pb-3 pt-4 pl-4 m-0">Opções de resposta (clique para adicionar novas opções) '+
       '<span class="add-opcao-resposta"><i class="fas fa-plus-circle text-success"></i></span></p>'+
       '<ul class="lista-opcoes">'+
@@ -96,6 +96,33 @@
         }
       });      
     })();
+
+    //adiciona respostas (para perguntas do tipo radio, checkbox, select e multi text)
+    (function(){
+      var templateRespostas = '<li class="pb-4"><span class="arrastar" data-toggle="tooltip" data-placement="top" '+
+      'title="Arraste para mudar a ordem"><i class="fas fa-arrows-alt"></i></span><span contenteditable="true" class="txt-resposta">' +
+      'Clique aqui para editar o texto da resposta.</span>' +
+      '<span class="remover-resposta ml-4" data-toggle="tooltip" data-placement="top" '+
+      'title="Remover resposta"><i class="fas fa-trash fa-1x"></i></span></li>';
+      
+      $('body').on('click', '.add-opcao-resposta', function(){
+        var el = $(this).parent().parent().find('.lista-opcoes');
+        el.append(templateRespostas);
+      });
+    })();
+    
+    //remove opções de respostas
+    (function(){
+      $('body').on('click', '.remover-resposta', function(){
+        var el = $(this).parent().parent();
+        console.log(el.find('li').length);
+        if(el.find('li').length > 1)
+        {
+          $(this).parent().remove();
+        }
+      });      
+    })();
+
   </script>
 </body>
 
